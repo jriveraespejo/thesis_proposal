@@ -5,14 +5,14 @@
 % -------------------------------------------------------------------
 \RequirePackage{fix-cm}
 \documentclass[12pt,a4paper,oneside]{article}
-
+%
 % ------------------------- Load packages ---------------------------
 % You can eventually add these while you load other packages
 % in case you want to integrate the titlepage with the rest of your thesis
 % -------------------------------------------------------------------
 \usepackage{graphicx,xcolor,textpos}
 \usepackage{helvet}
-
+%
 %\usepackage[top=3cm, bottom=2.54cm, left=3cm, right=2.54cm]{geometry} % margins
 \usepackage{setspace} 							  % flexible spacing
 %\setlength{\parskip}{2.5mm} 			    % paragraph space
@@ -23,31 +23,31 @@
 \usepackage{url} 								      % web addressess
 \usepackage{enumerate} 							  % numbered lines
 \usepackage{color, soul}						  % highlight text
-
+%
 % ------------------------ Page settings -----------------------------
 % If you change these, the cover layout will also change.  In that
 % case you have to adjust the latter manually.
 % --------------------------------------------------------------------
-
+%
 \topmargin -10mm
 \textwidth 160truemm
 \textheight 240truemm
 \oddsidemargin 0mm
 \evensidemargin 0mm
-
+%
 % ---------------------- textpos settings ----------------------------
 % Some additional settings for the cover
 % --------------------------------------------------------------------
-
+%
 \definecolor{green}{RGB}{172,196,0}
 \definecolor{bluetitle}{RGB}{29,141,176}
 \definecolor{blueaff}{RGB}{0,0,128}
 \definecolor{blueline}{RGB}{82,189,236}
 \setlength{\TPHorizModule}{1mm}
 \setlength{\TPVertModule}{1mm}
-
+%
 \begin{document}
-
+%
 % ----------------------- Cover --------------------------------------
 % Please fill in:
 % - The title and subtitle (if applicable)
@@ -59,8 +59,7 @@
 % - The academic year
 % --------------------------------------------------------------------
 \graphicspath{{./images/}} 	          % relative path for images
-
-
+%
 \thispagestyle{empty}
 \newcommand{\form}[1]{\scalebox{1.087}{\boldmath{#1}}}
 \sffamily
@@ -125,7 +124,7 @@ Academic year 2020-2021
 %
 \vfill
 \newpage
-
+%
 % In case you want to integrate the TeX-file for the titlepage
 % with the rest of your thesis, you can continue below
 % ------------------------- First pages ---------------------------
@@ -134,22 +133,19 @@ Academic year 2020-2021
 \rmfamily
 \setcounter{page}{0}
 \pagenumbering{roman}
-
-
+%
 % -------------------------- Proper text --------------------------
 % Introduction, chapters, ...
 % -----------------------------------------------------------------
 \newpage
 \setcounter{page}{0}
 \pagenumbering{arabic}
-
-
+%
 %---------------------------
 % body
 %---------------------------  
 \input proposal_body
-
-
+%
 %---------------------------
 % Bibliography
 %---------------------------
@@ -157,47 +153,3 @@ Academic year 2020-2021
 \backmatter \singlespacing    % simple spacing
 \bibliography{bibliography}
 \bibliographystyle{dcu}
-
-
-
-  
-\newpage  
-% ----------------------- Back cover ------------------------------
-% Please fill in:
-% - Department
-% - Department's address
-% - Telephone number and fax number
-% -----------------------------------------------------------------
-\thispagestyle{empty}
-\sffamily
-%
-\begin{textblock}{191}(113,-11)
-{\color{blueline}\rule{160pt}{5.5pt}}
-\end{textblock}
-%
-\begin{textblock}{191}(168,-11)
-{\color{blueline}\rule{5.5pt}{59pt}}
-\end{textblock}
-%
-\begin{textblock}{183}(-24,-11)
-\textblockcolour{}
-\flushright
-\fontsize{7}{7.5}\selectfont
-\textbf{AFDELING}\\
-Straat nr bus 0000\\
-3000 LEUVEN, BELGI\"{E}\\
-tel. + 32 16 00 00 00\\
-fax + 32 16 00 00 00\\
-www.kuleuven.be\\
-\end{textblock}
-%
-\begin{textblock}{191}(154,-7)
-\textblockcolour{}
-\includegraphics*[height=16.5truemm]{sedes}
-\end{textblock}
-%
-\begin{textblock}{191}(-20,235)
-{\color{bluetitle}\rule{544pt}{55pt}}
-\end{textblock}
-
-\end{document}
